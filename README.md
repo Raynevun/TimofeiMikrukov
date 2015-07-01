@@ -1,7 +1,7 @@
 #Running#
 To start execution please use following command
 `bundler exec ruby main.rb`
-You can use specify attributes as was described or put `-h` to get help
+You can use specified attributes `--from` and `--to` as was described or put `-h` to get help
 To execute tests please use this command
 `bundler exec rspec summarize_spec.rb`
 
