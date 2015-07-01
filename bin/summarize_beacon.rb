@@ -48,7 +48,7 @@ class SummarizeBeacon
   end
 
   #Parsing runtime arguments and return hash in format {from: TIMESTAMP, to:TIMESTAMP}
-  def parse_arguments
+  def parse_arguments(argv = ARGV)
     options = {}
 
     option_parser = OptionParser.new do |opts|
@@ -66,7 +66,7 @@ class SummarizeBeacon
     end
 
     begin
-      option_parser.parse! ARGV
+      option_parser.parse! argv
     rescue OptionParser::InvalidOption => e
       puts e
       puts option_parser
@@ -82,7 +82,7 @@ class SummarizeBeacon
       raise 'Incorrect date format' unless words.all? { |word| DATE_KEYWORDS.include?(word.pluralize) || word=~/\d+/ }
 
       #Converting string into timestamp
-      time = Time.new
+      time = Time.now
       words.each_slice(2) { |attr|
         raise 'Incorrect date format' unless attr[0]=~/\d+/
         raise 'Incorrect date format' unless attr[1]=~/[a-z]+/

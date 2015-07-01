@@ -14,8 +14,11 @@ GEM
       domain_name (~> 0.5)
     i18n (0.7.0)
     json (1.8.3)
+    metaclass (0.0.4)
     mime-types (2.6.1)
     minitest (5.7.0)
+    mocha (1.1.0)
+      metaclass (~> 0.0.1)
     netrc (0.10.3)
     rest-client (1.8.0)
       http-cookie (>= 1.0.2, < 2.0)
@@ -46,6 +49,7 @@ PLATFORMS
 
 DEPENDENCIES
   activesupport
+  mocha
   rest-client
   rspec
   rspec-core

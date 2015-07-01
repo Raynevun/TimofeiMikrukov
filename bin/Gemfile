@@ -3,4 +3,5 @@ gem 'rest-client'
 gem 'activesupport'
 gem 'rspec'
 gem 'rspec-core'
+gem 'mocha'
 
